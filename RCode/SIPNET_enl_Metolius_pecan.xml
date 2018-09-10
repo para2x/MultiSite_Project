@@ -67,6 +67,9 @@
       <id>764</id>
       <met.start>2004-01-01 00:00:00</met.start>
       <met.end>2004-12-31 00:00:00</met.end>
+      <name>Metolius-second young aged pine (US-Me3)</name>
+      <lat>44.3157</lat>
+      <lon>-121.608</lon>
     </site>
     <inputs>
       <met>

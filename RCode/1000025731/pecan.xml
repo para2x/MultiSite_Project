@@ -5,18 +5,17 @@
     <username>Shawn P. Serbin</username>
     <date>2018/08/29 14:07:17 +0000</date>
   </info>
-  <outdir>/fs/data3/hamzed/MultiSite_Project</outdir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/RCode/1000025731</outdir>
   <database>
     <bety>
       <user>bety</user>
       <password>bety</password>
-      <host>localhost</host>
-      <port>5432</port>
+      <host>128.197.168.114</host>
       <dbname>bety</dbname>
       <driver>PostgreSQL</driver>
-      <write>true</write>
+      <write>false</write>
     </bety>
-    <dbfiles>/data/Model_Output/pecan.output/dbfiles</dbfiles>
+    <dbfiles>/fs/data1/pecan.data/dbfiles/</dbfiles>
   </database>
   <pfts>
     <pft>
@@ -69,8 +68,9 @@
       <met.end>2010-12-31 00:00:00</met.end>
     </site>
     <inputs>
-      <met>
-        <id>2000000221</id>
+        <met>
+        <source>CRUNCEP</source>
+        <output>SIPNET</output>
       </met>
     </inputs>
     <start.date>1980/01/01</start.date>
@@ -78,7 +78,7 @@
   </run>
    <host>
   <name>localhost</name>
-  <rundir>/fs/data3/hamzed/MultiSite_Project/run</rundir>
-  <outdir>/fs/data3/hamzed/MultiSite_Project/out</outdir>
+  <rundir>/fs/data3/hamzed/MultiSite_Project/RCode/1000025731/run</rundir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/RCode/1000025731/out</outdir>
  </host>
 </pecan>
