@@ -5,7 +5,7 @@
     <username>Shawn P. Serbin</username>
     <date>2018/08/29 14:07:17 +0000</date>
   </info>
-  <outdir>/data/Model_Output/pecan.output/PEcAn_2000001024</outdir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project</outdir>
   <database>
     <bety>
       <user>bety</user>
@@ -76,16 +76,9 @@
     <start.date>1980/01/01</start.date>
     <end.date>2010/12/31</end.date>
   </run>
-  <host>
-    <name>localhost</name>
-    <scratchdir>/scratch</scratchdir>
-    <prerun>module load gcc/5.4.0 jags/4.3.0 udunits/2.2.25 python/2.7.14 redland hdf5/1.8.19-gcc540 netcdf/4.4.1.1-gnu540</prerun>
-    <qsub>qsub -l walltime=36:00:00 -V -N @NAME@ -o @STDOUT@ -e @STDERR@ -S /bin/bash</qsub>
-    <qsub.jobid>([[:digit:]]+)\.modex\.bnl\.gov</qsub.jobid>
-    <qstat>qstat @JOBID@ || echo DONE</qstat>
-  </host>
-  <email>
-    <to>sserbin@bnl.gov</to>
-    <url>https://modex.bnl.gov:443/pecan_dev/08-finished.php?workflowid=2000001024</url>
-  </email>
+   <host>
+  <name>localhost</name>
+  <rundir>/fs/data3/hamzed/MultiSite_Project/run</rundir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/out</outdir>
+ </host>
 </pecan>
