@@ -1,0 +1,82 @@
+<pecan>
+  <info>
+    <notes/>
+    <userid>2000000002</userid>
+    <username>Shawn P. Serbin</username>
+    <date>2018/08/29 14:07:59 +0000</date>
+  </info>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/SimpleRun/764</outdir>
+  <database>
+    <bety>
+      <user>bety</user>
+      <password>bety</password>
+      <host>128.197.168.114</host>
+      <dbname>bety</dbname>
+      <driver>PostgreSQL</driver>
+      <write>false</write>
+    </bety>
+    <dbfiles>/fs/data1/pecan.data/dbfiles/</dbfiles>
+  </database>
+  <pfts>
+    <pft>
+      <name>temperate.needleleaf.evergreen</name> 
+      <constants>
+        <num>1</num>
+      </constants>
+    </pft>
+  </pfts>
+  <meta.analysis>
+    <iter>3000</iter>
+    <random.effects>FALSE</random.effects>
+  </meta.analysis>
+  <ensemble>
+   <size>15</size>
+   <variable>NPP</variable>
+   <samplingspace>
+   <parameters>
+    <method>sobol</method>
+   </parameters>
+   <met>
+    <method>sampling</method>
+ 	</met>
+   </samplingspace>
+  </ensemble>
+  <sensitivity.analysis>
+    <quantiles>
+      <sigma>0</sigma>
+      <sigma>1</sigma>
+    </quantiles>
+    <variable>NPP</variable>
+  </sensitivity.analysis>
+  <model>
+    <id>1000000014</id>
+    <prerun>echo 'prerun'</prerun>
+    <postrun>echo 'poststep'; sleep 60</postrun>
+  </model>
+  <workflow>
+    <id>2000001025</id>
+  </workflow>
+  <run>
+    <site>
+      <id>764</id>
+      <met.start>2004-01-01 00:00:00</met.start>
+      <met.end>2004-12-31 00:00:00</met.end>
+      <name>Metolius-second young aged pine (US-Me3)</name>
+      <lat>44.3157</lat>
+      <lon>-121.608</lon>
+    </site>
+       <inputs>
+        <met>
+        <source>CRUNCEP</source>
+        <output>SIPNET</output>
+      </met>
+    </inputs>
+    <start.date>1980/01/01</start.date>
+    <end.date>2010/12/31</end.date>
+  </run>
+   <host>
+  <name>localhost</name>
+  <rundir>/fs/data3/hamzed/MultiSite_Project/SimpleRun/764/run</rundir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/SimpleRun/764/out</outdir>
+ </host>
+ </pecan>

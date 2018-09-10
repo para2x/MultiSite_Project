@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<pecan>
+ <info>
+  <notes></notes>
+  <userid>2000000002</userid>
+  <username>Shawn P. Serbin</username>
+  <date>2018/08/29 14:07:59 +0000</date>
+ </info>
+ <outdir>/fs/data3/hamzed/MultiSite_Project/RCode/764</outdir>
+ <database>
+  <bety>
+   <user>bety</user>
+   <password>bety</password>
+   <host>128.197.168.114</host>
+   <dbname>bety</dbname>
+   <driver>PostgreSQL</driver>
+   <write>FALSE</write>
+  </bety>
+  <dbfiles>/fs/data1/pecan.data/dbfiles</dbfiles>
+ </database>
+ <pfts>
+  <pft>
+   <name>temperate.needleleaf.evergreen</name>
+   <constants>
+    <num>1</num>
+   </constants>
+   <outdir>/fs/data3/hamzed/MultiSite_Project/RCode/764/pft/temperate.needleleaf.evergreen</outdir>
+  </pft>
+ </pfts>
+ <meta.analysis>
+  <iter>3000</iter>
+  <random.effects>FALSE</random.effects>
+  <threshold>1.2</threshold>
+  <update>AUTO</update>
+ </meta.analysis>
+ <ensemble>
+  <size>15</size>
+  <variable>NPP</variable>
+  <samplingspace>
+   <parameters>
+    <method>sobol</method>
+   </parameters>
+   <met>
+    <method>sampling</method>
+   </met>
+  </samplingspace>
+  <start.year>1980</start.year>
+  <end.year>2010</end.year>
+ </ensemble>
+ <sensitivity.analysis>
+  <quantiles>
+   <sigma>0</sigma>
+   <sigma>1</sigma>
+  </quantiles>
+  <variable>NPP</variable>
+  <start.year>1980</start.year>
+  <end.year>2010</end.year>
+ </sensitivity.analysis>
+ <model>
+  <id>1000000014</id>
+  <prerun>echo &apos;prerun&apos;</prerun>
+  <postrun>echo &apos;poststep&apos;; sleep 60</postrun>
+  <type>SIPNET</type>
+  <revision>r136</revision>
+  <delete.raw>FALSE</delete.raw>
+  <binary>/fs/data5/pecan.models/SIPNET/trunk/sipnet</binary>
+ </model>
+ <workflow>
+  <id>2018-09-10-15-19-03</id>
+ </workflow>
+ <run>
+  <site>
+   <id>764</id>
+   <met.start>2004-01-01 00:00:00</met.start>
+   <met.end>2004-12-31 00:00:00</met.end>
+   <name>Metolius-second young aged pine (US-Me3)</name>
+   <lat>44.3157</lat>
+   <lon>-121.608</lon>
+  </site>
+  <inputs>
+   <met>
+    <source>CRUNCEP</source>
+    <output>SIPNET</output>
+    <id>
+     <id1>1000020662</id1>
+    </id>
+    <path>
+     <path1>/fs/data1/pecan.data/dbfiles/CRUNCEP_SIPNET_site_0-764/CRUNCEP.1980-01-01.2010-12-31.clim</path1>
+    </path>
+   </met>
+  </inputs>
+  <start.date>1980/01/01</start.date>
+  <end.date>2010/12/31</end.date>
+ </run>
+ <host>
+  <name>localhost</name>
+  <rundir>/fs/data3/hamzed/MultiSite_Project/RCode/764/run</rundir>
+  <outdir>/fs/data3/hamzed/MultiSite_Project/RCode/764/out</outdir>
+ </host>
+ <settings.info>
+  <deprecated.settings.fixed>TRUE</deprecated.settings.fixed>
+  <settings.updated>TRUE</settings.updated>
+  <checked>TRUE</checked>
+ </settings.info>
+ <rundir>/fs/data3/hamzed/MultiSite_Project/RCode/764/run</rundir>
+ <modeloutdir>/fs/data3/hamzed/MultiSite_Project/RCode/764/out</modeloutdir>
+</pecan>
