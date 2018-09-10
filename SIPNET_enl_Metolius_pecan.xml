@@ -1,0 +1,87 @@
+<?xml version="1.0"?><pecan>
+  <info>
+    <notes/>
+    <userid>2000000002</userid>
+    <username>Shawn P. Serbin</username>
+    <date>2018/08/29 14:07:59 +0000</date>
+  </info>
+  <outdir>/data/Model_Output/pecan.output/PEcAn_2000001025</outdir>
+  <database>
+    <bety>
+      <user>bety</user>
+      <password>bety</password>
+      <host>localhost</host>
+      <port>5432</port>
+      <dbname>bety</dbname>
+      <driver>PostgreSQL</driver>
+      <write>true</write>
+    </bety>
+    <dbfiles>/data/Model_Output/pecan.output/dbfiles</dbfiles>
+  </database>
+  <pfts>
+    <pft>
+      <name>temperate.needleleaf.evergreen</name> 
+      <constants>
+        <num>1</num>
+      </constants>
+    </pft>
+  </pfts>
+  <meta.analysis>
+    <iter>3000</iter>
+    <random.effects>FALSE</random.effects>
+  </meta.analysis>
+  <ensemble>
+   <size>85</size>
+   <variable>NPP</variable>
+   <samplingspace>
+   <parameters>
+    <method>sobol</method>
+   </parameters>
+   <met>
+    <method>sampling</method>
+ 	</met>
+   </samplingspace>
+  </ensemble>
+  <sensitivity.analysis>
+    <quantiles>
+      <sigma>-3</sigma>
+      <sigma>-2</sigma>
+      <sigma>-1</sigma>
+      <sigma>0</sigma>
+      <sigma>1</sigma>
+      <sigma>2</sigma>
+      <sigma>3</sigma>
+    </quantiles>
+    <variable>NPP</variable>
+  </sensitivity.analysis>
+  <model>
+    <id>1000000014</id>
+    <prerun>echo 'prerun'</prerun>
+    <postrun>echo 'poststep'; sleep 60</postrun>
+  </model>
+  <workflow>
+    <id>2000001025</id>
+  </workflow>
+  <run>
+    <site>
+      <id>764</id>
+      <met.start>2004-01-01 00:00:00</met.start>
+      <met.end>2004-12-31 00:00:00</met.end>
+    </site>
+    <inputs>
+      <met>
+        <id>2000000044</id>
+      </met>
+    </inputs>
+    <start.date>2004/01/01</start.date>
+    <end.date>2004/12/31</end.date>
+  </run>
+  <host>
+    <name>localhost</name>
+    <scratchdir>/scratch</scratchdir>
+    <prerun>module load gcc/5.4.0 jags/4.3.0 udunits/2.2.25 python/2.7.14 redland hdf5/1.8.19-gcc540 netcdf/4.4.1.1-gnu540</prerun>
+    <qsub>qsub -l walltime=36:00:00 -V -N @NAME@ -o @STDOUT@ -e @STDERR@ -S /bin/bash</qsub>
+    <qsub.jobid>([[:digit:]]+)\.modex\.bnl\.gov</qsub.jobid>
+    <qstat>qstat @JOBID@ || echo DONE</qstat>
+  </host>
+</pecan>
